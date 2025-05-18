@@ -1,8 +1,7 @@
 // js/api.js
-const API_BASE = ''
-// вместо 'http://localhost:8888'
-// а при запросах:
-fetch(`${API_BASE}/api/orders`)
+
+// Устанавливаем базовый путь к API
+const API_BASE = '/api'
 
 async function request(path, method = 'GET', body) {
 	const opts = { method, headers: {} }
