@@ -1,0 +1,151 @@
+/* styles.css */
+
+/* CSS Variables */
+:root {
+	--primary-color: #0d6efd;
+	--secondary-color: #198754;
+	--bg-light: #f8f9fa;
+	--bg-body: #f2f2f2;
+	--card-bg: #ffffff;
+	--text-color: #212529;
+	--border-radius: 0.5rem;
+	--shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+	--shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Base reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	background-color: var(--bg-body);
+	color: var(--text-color);
+	line-height: 1.6;
+}
+
+/* Container adjustments */
+.container {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+}
+
+/* Form cards */
+form {
+	background-color: var(--card-bg);
+	padding: 1.5rem;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow-sm);
+	margin-bottom: 2rem;
+}
+
+/* Headings */
+h1,
+h3 {
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: darken(var(--primary-color), 5%);
+	border-color: darken(var(--primary-color), 8%);
+}
+
+.btn-success {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+	background-color: darken(var(--secondary-color), 5%);
+	border-color: darken(var(--secondary-color), 8%);
+}
+
+/* Table styling */
+table {
+	background-color: var(--card-bg);
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow-sm);
+	overflow: hidden;
+}
+
+.table thead {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.table tbody tr {
+	transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+	background-color: rgba(13, 110, 253, 0.1);
+}
+
+/* Navbar */
+.navbar {
+	box-shadow: var(--shadow-sm);
+}
+
+.navbar-brand {
+	font-weight: 600;
+	font-size: 1.25rem;
+}
+
+/* Card-like wrappers for content sections */
+main .card-wrapper {
+	background-color: var(--card-bg);
+	padding: 1.5rem;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow-sm);
+	margin-bottom: 2rem;
+}
+
+/* Price label style */
+#priceLabel {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.container {
+		padding: 0.5rem;
+	}
+	form {
+		padding: 1rem;
+	}
+	.table-responsive {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 576px) {
+	h1,
+	h3 {
+		font-size: 1.25rem;
+	}
+	.btn {
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+	}
+	#priceLabel {
+		font-size: 1.25rem;
+	}
+}

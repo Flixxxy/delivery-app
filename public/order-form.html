@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Новый заказ — DeliveryApp</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/styles.css" />
+		<style>
+			#map {
+				width: 100%;
+				height: 300px;
+				margin-bottom: 1rem;
+				border: 1px solid #ccc;
+			}
+			#orderForm {
+				background: #fff;
+				padding: 1rem;
+				border-radius: 0.5rem;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			}
+		</style>
+	</head>
+	<body>
+		<nav
+			id="mainNavbar"
+			class="navbar navbar-expand-lg navbar-light bg-light"
+		></nav>
+		<main class="container mt-4">
+			<h3 class="mb-3">Оформление нового заказа</h3>
+			<div id="map"></div>
+			<div class="row mb-3">
+				<div class="col-md-6 mb-2">
+					<label class="form-label">Откуда (адрес)</label>
+					<input
+						type="text"
+						id="addrFrom"
+						class="form-control"
+						placeholder="Город, улица, дом"
+					/>
+				</div>
+				<div class="col-md-6 mb-2">
+					<label class="form-label">Куда (адрес)</label>
+					<input
+						type="text"
+						id="addrTo"
+						class="form-control"
+						placeholder="Город, улица, дом"
+					/>
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="manualDistance" class="form-label"
+					>Расстояние (км, вручную)</label
+				>
+				<input
+					type="number"
+					step="0.1"
+					id="manualDistance"
+					class="form-control"
+					placeholder="Вводите вручную"
+					required
+				/>
+			</div>
+			<p>
+				Ориентировочная стоимость:
+				<strong><span id="priceLabel">—</span> сом</strong>
+			</p>
+			<form id="orderForm">
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label">Вес (кг)</label>
+						<input
+							type="number"
+							step="0.1"
+							id="weight"
+							class="form-control"
+							required
+						/>
+					</div>
+					<div class="col-md-6 mb-3">
+						<label class="form-label">Габариты (см)</label>
+						<input
+							type="text"
+							id="dimensions"
+							class="form-control"
+							placeholder="Д×Ш×В"
+						/>
+					</div>
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Тариф</label>
+					<select id="tariff" class="form-select" required>
+						<option value="standard">Стандарт</option>
+						<option value="express">Срочный</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-success w-100">
+					Перейти к оплате
+				</button>
+			</form>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="module" src="../js/navigation.js"></script>
+		<script type="module" src="../js/order.js"></script>
+	</body>
+</html>

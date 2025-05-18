@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Клиент тест",
+      "email": "client@m.com",
+      "password": "admin",
+      "role": "Client"
+    },
+    {
+      "id": "2",
+      "name": "admin",
+      "email": "admin@m.com",
+      "password": "admin",
+      "role": "Admin"
+    },
+    {
+      "id": "3",
+      "name": "Курьер",
+      "email": "courier@m.com",
+      "password": "admin",
+      "role": "Courier"
+    },
+    {
+      "id": "4",
+      "name": "Оператор",
+      "email": "oper@m.com",
+      "password": "admin",
+      "role": "Operator"
+    }
+  ],
+  "orders": [
+    {
+      "id": "new1",
+      "addressFrom": "ул. Ленина, 1",
+      "addressTo": "пр. Победы, 10",
+      "distance": 5,
+      "duration": null,
+      "weight": 2,
+      "dimensions": "30×20×10",
+      "tariff": "standard",
+      "price": 350,
+      "status": "Доставлено",
+      "clientId": "1",
+      "courierId": "3",
+      "paymentMethod": "online",
+      "paid": true
+    },
+    {
+      "id": "proc1",
+      "addressFrom": "ул. Советская, 15",
+      "addressTo": "ул. Токтогула, 15",
+      "distance": 15,
+      "duration": null,
+      "weight": 10,
+      "dimensions": "50×40×30",
+      "tariff": "standard",
+      "price": 1050,
+      "status": "Доставлено",
+      "clientId": "2",
+      "courierId": "3",
+      "paymentMethod": "online",
+      "paid": true
+    },
+    {
+      "id": "deliv1",
+      "addressFrom": "ул. Фрунзе, 5",
+      "addressTo": "ул. Абдрасулова, 20",
+      "distance": 8,
+      "duration": null,
+      "weight": 5,
+      "dimensions": "40×30×20",
+      "tariff": "express",
+      "price": 900,
+      "status": "Доставлено",
+      "clientId": "1",
+      "courierId": "3",
+      "paymentMethod": "cash",
+      "paid": false
+    }
+  ]
+}
